@@ -3,17 +3,17 @@
 import RPi.GPIO as GPIO
 
 class Laser (object):
-	"""
-	Classe Laser -> permet juste de contrôler le transistor qui ouvre/ferme le circuit du laser
-	"""
+    """
+    Classe Laser -> permet juste de contrôler le transistor qui ouvre/ferme le circuit du laser
+    """
 
-	def __init__(self, pin):
-		self.pin = pin
-		GPIO.setmode(GPIO.BCM)
-		GPIO.setup(self.pin, GPIO.OUT)
+    def __init__(self, pin):
+        self.pin = pin
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setup(self.pin, GPIO.OUT)
 
-	def on(self):
-		GPIO.output(self.pin, 1)
+    def on(self):
+        GPIO.output(self.pin, 1)
 
-	def off(self):
-		GPIO.output(self.pin, 0)
+    def off(self):
+        GPIO.output(self.pin, 0)
